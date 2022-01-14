@@ -1,0 +1,374 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Rubik:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    animation-duration: 2s;
+}
+:root{
+    --CorFundo: #fff8EC; 
+    --Cor1: #005ee1;
+    --Cor2: #000000;
+    
+}
+
+body{
+    background-color: #DADADA;
+    font-family: 'Rubik', sans-serif;
+    font-size: 17px;
+}
+
+#page{
+    max-width: 1200px;
+    background-color: var(--CorFundo);
+    margin: auto;
+}
+
+#page>header{
+    height: 170px;
+    display: flex;
+    background-color: var(--Cor1);
+    padding: 25px;
+    padding-right: 0;
+    color: var(--CorFundo);
+    border-bottom:  10px solid var(--Cor2);
+}
+
+#avatar{
+    flex-grow: 1;
+
+}
+
+#avatar img{
+    width: 200px;
+    margin-right: 2px;
+    margin-top: -23px;
+    border: 6px solid var(--CorFundo);
+    border-radius: 50%;
+    animation-name: rodaesubir;
+
+}
+
+#nome{
+    border: 10px solid var(--Cor2);
+    border-right: none;
+    padding: 10x 0;
+    text-align: center;
+    flex-grow: 5;
+    animation-name: surgir-direita;
+    
+}
+
+#nome>h1{
+    font-size: 400%;
+    text-transform: uppercase;
+}
+
+#nome>h5{
+    font-size: 180%;
+}
+
+
+
+#page>main{
+    display: grid;
+    grid-template-areas: 
+    'S C'
+    'E E'
+    'P P'
+    'L L'
+    'APR APS'
+    ;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+#perfil{
+    grid-area: S;
+    text-align: center;
+    animation-name: surgir-esquerda;
+
+}
+
+#perfil>div{
+    max-width: 100%;
+    margin: 10px;
+    text-align: justify;
+
+}
+
+#contato{
+    grid-area: C;
+    animation-name: surgir-direita;
+
+}
+
+#contato>div>ul>li{
+    margin: 10px 0;
+}
+
+#educacao{
+    grid-area: E;
+    animation-name: surgir-esquerda;
+
+}
+#profissional{
+    grid-area: P;
+    animation-name: surgir-direita;
+
+}
+
+#liguagem{
+    grid-area: L;
+    animation-name: surgir-esquerda;
+    
+    
+
+}
+
+#apr{
+    grid-area: APR;
+    animation-name: surgir-esquerda;
+
+}
+
+#apr>div, #aps>div{
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px;
+
+
+}
+
+#apr>div>b, #aps>div>b{
+    width: auto;
+}
+
+#aps{
+    grid-area: APS;
+    animation-name: surgir-direita;
+
+}
+
+main>section{
+    border: 2px solid var(--Cor1);
+    border-left-width: 48px;
+    margin: 10px;
+    min-height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    
+    
+}
+
+.decore>li>a{
+    text-decoration: none;
+    color: black;
+}
+
+main>#profissional>div{
+    display: flex;
+    flex-flow: column;
+    padding: 30px;
+    
+}
+
+main>#educacao>div{
+    display: flex;
+    flex-flow: column;
+    padding: 30px;
+    
+}
+
+main>#liguagem>div{
+    display: flex;
+    flex-flow: column;
+    padding: 30px;
+    
+}
+
+main>#liguagem>div>ul>li{
+    margin-top: 20px;
+    margin-right: 5px;
+    
+
+   
+    
+}
+
+.cor2{
+    border-color: var(--Cor2);
+}
+
+main>section>h2:first-child{
+    text-transform: uppercase;
+    writing-mode: vertical-lr;
+    height: 100%;
+    position: absolute;
+    line-height: 40px;
+    transform: rotate(180deg);
+    text-align: center;
+    width: 40px;
+    color: white;
+    font-size: 1em;
+    left: -40px;
+    flex-wrap: wrap;
+
+}
+
+main>section>div{
+    max-width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+main>section>div>span, main>section>div>span{
+    width: 100%;
+}
+
+main>section>div>span{
+    font-size: 0.7em;
+}
+
+section .habilidades>li{
+    padding: 6px;
+    background-color: var(--Cor2);
+    margin: 5px 5px 0 5px;
+    float: left;
+    border-radius: 50%;
+}
+
+
+#page>footer{
+    background-color: var(--Cor1);
+    padding: 10px 0;
+    text-align: center;
+    color: var(--CorFundo);
+}
+
+.habilidades[value="1"]>li:nth-child(1) ~ li{
+    background-color:var(--Cor1);
+}
+
+.habilidades[value="2"]>li:nth-child(2) ~ li{
+    background-color:var(--Cor1);
+}
+
+.habilidades[value="3"]>li:nth-child(3) ~ li{
+    background-color:var(--Cor1);
+}
+
+.habilidades[value="4"]>li:nth-child(4) ~ li{
+    background-color:var(--Cor1);
+}
+
+
+@media screen and (max-width:1000px){
+    #nome>h1{
+        font-size: 3em;
+        margin-top: 20px;
+    }
+
+    #nome>h5{
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width:666px){
+    #page>header{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+    }
+    
+    #nome{
+        border: none;
+    }
+    #page>main{
+        display: block;
+    }
+}
+
+@media screen and (max-width:409px){
+    #page>header{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+        font-size: 12px;
+    }
+    
+    #nome{
+        border: none;
+    }
+    #page>main{
+        display: block;
+    }
+}
+
+@keyframes surgir-direita{
+    8%{
+        margin-left: 100%;
+        transform: scale(0);
+        
+    }
+    50%{        
+        transform: scale(0.1);
+    }
+
+}
+
+@keyframes surgir-esquerda{
+    8%{
+        margin-right: 100%;
+        transform: scale(0);
+        
+    }
+    50%{        
+        transform: scale(0.1);
+    }
+
+}
+
+@keyframes rodaesubir{
+    0%{
+        position: fixed;
+        top: 80%;
+        left: 80%;
+        transform: rotate(90deg);
+    }
+
+    20%{
+        transform: rotate(150deg);
+
+    }
+
+    40%{
+        transform: rotate(250deg);
+
+    }
+
+    60%{
+        transform: rotate(320deg);       
+
+    }
+
+    80%{
+        position: fixed;
+        top: 5%;
+        left: 8%;        
+        transform: rotate(360deg);
+
+    }
+}
